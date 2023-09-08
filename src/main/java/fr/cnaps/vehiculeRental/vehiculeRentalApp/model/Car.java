@@ -2,6 +2,8 @@ package fr.cnaps.vehiculeRental.vehiculeRentalApp.model;
 
 import jakarta.persistence.*;
 
+import java.util.Optional;
+
 // @DATA pour ne pas avoir a crée les GETTER et pouvoir directement acceder aux données
 @Entity
 @Table (name = "cars")
@@ -17,6 +19,9 @@ public class Car {
     private int power;
     private int price;
     private int pricekm;
+
+    public Car(int price, int pricekm) {
+    }
 
 
     public void setId(int id) {
@@ -36,7 +41,6 @@ public class Car {
         this.price = price;
         this.pricekm = pricekm;
     }
-
 
     public int getId() {
         return id;

@@ -23,15 +23,6 @@ public class Reservation {
     public Reservation() {
     }
 
-    public Reservation(int id, int clients_id, int cars_id, Date start_date, Date end_date,int kilometer,int price_resa) {
-        this.id = id;
-        this.clients_id = clients_id;
-        this.cars_id = cars_id;
-        this.start_date = start_date;
-        this.end_date = end_date;
-        this.kilometer = kilometer;
-        this.price_resa = price_resa;
-    }
 
     public int getId() {
         return id;

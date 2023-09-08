@@ -21,7 +21,7 @@ private CarService carService;
 
     @GetMapping("/{id}")
     public @ResponseBody Optional<Car> getCarsById(@PathVariable(value = "id") int id){
-        return carService.finById(id);
+        return carService.findById(id);
     }
 
     @PostMapping(value = "/add")
