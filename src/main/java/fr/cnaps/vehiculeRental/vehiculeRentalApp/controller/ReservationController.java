@@ -29,8 +29,10 @@ public class ReservationController {
     }
 
     @PostMapping(value = "/add")
-    public @ResponseBody String CreateReservation(@RequestBody Reservation reservation){
-        reservationService.save(reservation);
+    public @ResponseBody String CreateReservation(@RequestBody Reservation reservation) {
+        if(reservationService.save(reservation)==null){
+            return "reservation refused";
+        }
         return "Reservation successfuly";
     }
 

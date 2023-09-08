@@ -2,6 +2,9 @@ package fr.cnaps.vehiculeRental.vehiculeRentalApp.model;
 
 import jakarta.persistence.*;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 // @DATA pour ne pas avoir a crée les GETTER et pouvoir directement acceder aux données
@@ -14,7 +17,7 @@ public class Client {
     private Integer id;
     private String firstname;
     private String lastname;
-    private java.sql.Date birthday;
+    private LocalDateTime birthday;
     private int license;
 
 
@@ -23,7 +26,7 @@ public class Client {
     public Client() {
     }
 
-    public Client(int id, String firstname, String lastname, java.sql.Date birthday, int license) {
+    public Client(int id, String firstname, String lastname, LocalDateTime birthday, int license) {
         this.id = id;
         this.firstname = firstname;
         this.lastname = lastname;
@@ -54,11 +57,11 @@ public class Client {
         this.lastname = lastname;
     }
 
-    public Date getBirthday() {
+    public LocalDateTime getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(java.sql.Date birthday) {
+    public void setBirthday(LocalDateTime birthday) {
         this.birthday = birthday;
     }
 
